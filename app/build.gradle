@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.mnopenkit.h5service"
         minSdkVersion 19
@@ -39,5 +40,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(path: ':h5service')
 
-    //implementation 'com.github.wy749814530:MNH5Service:1.0.1'
+    //implementation 'com.github.wy749814530:MNH5Service:1.0.2'
 }

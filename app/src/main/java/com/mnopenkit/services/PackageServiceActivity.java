@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.mnopenkit.key.Parameter;
 
-public class MainActivity extends AppCompatActivity {
+public class PackageServiceActivity extends AppCompatActivity {
 
     String STR_APP_KEY = "8Wa227sQ00S33p4y";
     String STR_APP_SECRET = "RlA8aCPlsuATT227kKTg003ncP35HYRI";
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_package_service);
     }
 
     public void gotoServices(View view) {

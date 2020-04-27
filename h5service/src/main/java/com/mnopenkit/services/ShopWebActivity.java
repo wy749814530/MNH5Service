@@ -352,9 +352,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
                     }
                     //微信支付
                     if (url.startsWith("https://wx.tenpay.com/")) {
-                /*        Uri uri = Uri.parse(url);//调用外部浏览器也不行
-                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                        startActivity(intent);*/
                         if (("4.4.3".equals(VERSION.RELEASE))
                                 || ("4.4.4".equals(VERSION.RELEASE))) {
                             //兼容这两个版本设置referer无效的问题
