@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">H5Service</string>
+    <string name="four_g">4G服务</string>
+    <string name="dev_fourg_total">我的套餐</string>
+    <string name="web_order">我的订单</string>
+    <string name="web_title">增值服务</string>
+    <string name="web_close">关闭</string>
+    <string name="web_pay_succ">支付成功</string>
+    <string name="web_pay_failed">支付失败</string>
+    <string name="web_pay_ding">订单支付失败</string>
+    <string name="web_pay_netpoor">网络连接出错</string>
+    <string name="tool_mobile">移动服务中心</string>
+    <string name="network_monitoring_4G">设备4G网络检测</string>
+    <string name="pay_faild">支付被取消</string>
+    <string name="pay_succ">支付成功</string>
+    <string name="pay_dngdanfied">订单支付失败</string>
+    <string name="pay_netpoor">网络连接失败</string>
+    <string name="dev_freeget">免费领取</string>
+    <string name="scode_title">扫描二维码</string>
+    <string name="qr_tt">选择添加</string>
+    <string name="scan_text">将二维码置于框内,即可自动扫描</string>
+    <string name="qr_light">手电筒</string>
+    <string name="qr_pic">相册</string>
+    <string name="unrecognized_QR">无法识别的二维码或条形码</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_ok">确定</string>
+    <string name="tip_title">提示</string>
+    <string name="add_wifi_tip">温馨提示</string>
+    <string name="add_camera_per">请在设置中开启像机权限，以便正常使用</string>
+    <string name="go_to_settings">去设置</string>
+    <string name="put_code_in_the_box">请将二维码或条形码置于框内</string>
+    <string name="scan_code_recognition">扫码识别</string>
+</resources>
