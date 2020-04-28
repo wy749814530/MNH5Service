@@ -41,7 +41,6 @@ import com.alipay.sdk.app.H5PayCallback;
 import com.alipay.sdk.app.PayTask;
 import com.alipay.sdk.util.H5PayResultModel;
 import com.mnopenkit.key.Parameter;
-import com.mnopenkit.utils.StatusBarUtil;
 import com.mnopenkit.utils.StatusUtils;
 
 import java.io.UnsupportedEncodingException;
@@ -113,7 +112,7 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
 
         StatusUtils.setFullScreenStatur(this);
         StatusUtils.setLightStatusBarIcon(this, true);
-        StatusBarUtil.setPaddingSmart(this, rlTitleLay);
+        StatusUtils.setPaddingSmart(this, rlTitleLay);
 
         ivBack.setOnClickListener(this);
         webClose.setOnClickListener(this);

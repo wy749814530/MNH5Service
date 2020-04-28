@@ -11,7 +11,7 @@ public class PackageServiceActivity extends AppCompatActivity {
 
     String STR_APP_KEY = "8Wa227sQ00S33p4y";
     String STR_APP_SECRET = "RlA8aCPlsuATT227kKTg003ncP35HYRI";
-    String STR_APP_ACCESS_TOKEN = "u_f267315ecc45497bb766a438d2055caa.cn";
+    String STR_APP_ACCESS_TOKEN = "u_79da3a944baf4dd4b0051cb54bfaf368.cn";
     String STR_USER_ID = "13949127706";
     String STR_H5_HOST = "https://mallcn.bullyun.com";
     String DeviceId_4G = "424684214722498560";

@@ -8,7 +8,7 @@ import android.util.Log;
  * 带日志文件输入的，又可控开关的日志调试
  */
 public class LogUtil {
-    private static Boolean MYLOG_SWITCH = BuildConfig.LOG_DEBUG; // 日志文件总开关
+    private static Boolean MYLOG_SWITCH = true; // 日志文件总开关
     private static char MYLOG_TYPE = 'v';// 输入日志类型，w代表只输出告警信息等，v代表输出所有信息
 
     public static void w(String tag, Object msg) { // 警告信息
