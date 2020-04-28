@@ -224,7 +224,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
             @RequiresApi(api = VERSION_CODES.KITKAT)
             @Override
             public boolean shouldOverrideUrlLoading(final WebView view, final String url) {
-                LogUtil.i("shouldOverrideUrlLoading", url);
                 isPro = false;
                 isgoFirst = false;
                 try {
@@ -390,7 +389,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                LogUtil.i("onPageStarted", url);//anniu:///tokenReenabled
                 super.onPageStarted(view, url, favicon);
                 isPro = true;
             }
@@ -398,7 +396,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
             @RequiresApi(api = VERSION_CODES.KITKAT)
             @Override
             public void onPageFinished(WebView view, String url) {
-                LogUtil.i("WebView onPageFinished", url);
                 if (url.contains("mobile/pay/1")) {
                     deviceId = loaclDeviceId;
                     getArgument();
@@ -414,7 +411,7 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
                         webView.evaluateJavascript(argument, new ValueCallback<String>() {
                             @Override
                             public void onReceiveValue(String value) {
-                                LogUtil.i("onReceiveValue", value);
+
                             }
                         });
                     }
@@ -479,7 +476,7 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
                         + deviceId + "'" + "," + "'" + serviceType + "'" + ")";
             }
         }
-        LogUtil.i("ShopWebActivity", "argument = " + argument);
+
         return argument;
     }
 
@@ -489,7 +486,7 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 1000);
         } else {
-            Intent intent = new Intent(ShopWebActivity.this, AddQRcodeActivity.class);
+            Intent intent = new Intent(ShopWebActivity.this, ScanQRcodeActivity.class);
             intent.putExtra("gotype", 1);
             startActivityForResult(intent, 100);
         }
@@ -500,7 +497,7 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1000) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Intent intent = new Intent(ShopWebActivity.this, AddQRcodeActivity.class);
+                Intent intent = new Intent(ShopWebActivity.this, ScanQRcodeActivity.class);
                 intent.putExtra("gotype", 1);
                 startActivityForResult(intent, 100);
             } else {
@@ -535,16 +532,13 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100 && resultCode == 100) {
             String snResult = data.getStringExtra("snResult");
-            LogUtil.i("resultCode", "snre" + snResult);
             String qrArgument = getQrArgument(snResult);
-            LogUtil.i("resultCode", "snre：：：：" + snResult + "qr：：：：：：：" + qrArgument);
             if (VERSION.SDK_INT < 18) {
                 webView.loadUrl(qrArgument);
             } else {
                 webView.evaluateJavascript(qrArgument, new ValueCallback<String>() {
                     @Override
                     public void onReceiveValue(String value) {
-                        LogUtil.i("onReceiveValue", value);
                     }
                 });
             }
@@ -582,7 +576,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
                 setTvTitle(getString(R.string.four_g));
                 setRight(getString(R.string.dev_fourg_total));
                 setRightVisibility(View.VISIBLE);
-                LogUtil.i("hjz", "11111");
                 webView.goBack();
             } else if (isFourG && getTitleTv().equals(getString(R.string.tool_mobile))) {
                 webView.goBack();
@@ -675,7 +668,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
             setTvTitle(getString(R.string.four_g));
             setRight(getString(R.string.dev_fourg_total));
             setRightVisibility(View.VISIBLE);
-            LogUtil.i("hjz", "11111");
             webView.goBack();
         } else if (isFourG && getTitleTv().equals(getString(R.string.tool_mobile))) {
             isFourG = false;
@@ -744,7 +736,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
             }
             mToast.setGravity(Gravity.BOTTOM, 0, 175);
             mToast.show();
-            LogUtil.i("ToastUtils", "currentThread Name :" + Thread.currentThread().getName());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -761,7 +752,6 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             super.onProgressChanged(view, newProgress);
-            LogUtil.i("WebView onProgressChanged", newProgress + "%");
             if (newProgress == 100) {
                 webPro.setVisibility(View.GONE);
             } else {

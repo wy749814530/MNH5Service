@@ -22,20 +22,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.Result;
-import com.mining.zxing.activity.BaseScanActivity;
-import com.mining.zxing.activity.CodeUtils;
-import com.mining.zxing.helper.ImageAnalyzeLinstener;
-import com.mining.zxing.utils.ImageUtil;
-import com.mining.zxing.view.ViewfinderView;
+import com.wyu.zxing.activity.BaseScanActivity;
+import com.wyu.zxing.activity.CodeUtils;
+import com.wyu.zxing.helper.ImageAnalyzeLinstener;
+import com.wyu.zxing.utils.ImageUtil;
+import com.wyu.zxing.view.ViewfinderView;
 import com.mnopenkit.views.RuleAlertDialog;
 
 /**
  * Created by Administrator on 2019/10/24 0024.
  */
 
-public class AddQRcodeActivity extends BaseScanActivity implements ImageAnalyzeLinstener {
-    private String TAG = AddQRcodeActivity.class.getSimpleName();
+public class ScanQRcodeActivity extends BaseScanActivity implements ImageAnalyzeLinstener {
+    private String TAG = ScanQRcodeActivity.class.getSimpleName();
     public static final int REQUEST_IMAGE = 112;
     SurfaceView previewView;
     ViewfinderView viewfinderView;
@@ -45,7 +44,7 @@ public class AddQRcodeActivity extends BaseScanActivity implements ImageAnalyzeL
     TextView qrcodePhoto;
 
 
-    private static AddQRcodeActivity mActivity;
+    private static ScanQRcodeActivity mActivity;
     private boolean isClickSetting;
     private boolean initCarameSuc = false;
 
@@ -80,7 +79,7 @@ public class AddQRcodeActivity extends BaseScanActivity implements ImageAnalyzeL
 //        }
     }
 
-    public static AddQRcodeActivity getInstance() {
+    public static ScanQRcodeActivity getInstance() {
         return mActivity;
     }
 
@@ -179,15 +178,15 @@ public class AddQRcodeActivity extends BaseScanActivity implements ImageAnalyzeL
     }
 
     @Override
-    public void onQrAnalyzeSuccess(Result result, Bitmap barcode) {
-        Log.i("ScanActivity", "--- onQrAnalyzeSuccess ---" + result.toString() + " , " + barcode);
-        analyzeQrcodeData(result.toString());
+    public void onQrAnalyzeSuccess(String result, Bitmap barcode) {
+        Log.i("ScanActivity", "--- onQrAnalyzeSuccess ---" + result + " , " + barcode);
+        analyzeQrcodeData(result);
     }
 
     @Override
-    public void onImageAnalyzeSuccess(Result result, Bitmap barcode) {
-        Log.i("ScanActivity", "--- onImageAnalyzeSuccess ---" + result.toString() + " , " + barcode);
-        analyzeQrcodeData(result.toString());
+    public void onImageAnalyzeSuccess(String result, Bitmap barcode) {
+        Log.i("ScanActivity", "--- onImageAnalyzeSuccess ---" + result+ " , " + barcode);
+        analyzeQrcodeData(result);
         playBeepSoundAndVibrate();
     }
 

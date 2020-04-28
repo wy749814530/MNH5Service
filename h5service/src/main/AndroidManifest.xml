@@ -10,7 +10,7 @@
     <application>
 
         <activity
-            android:name="com.mnopenkit.services.AddQRcodeActivity"
+            android:name="com.mnopenkit.services.ScanQRcodeActivity"
             android:screenOrientation="portrait" />
 
         <activity
