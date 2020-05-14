@@ -39,5 +39,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(path: ':h5service')
-    //implementation 'com.github.wy749814530:MNH5Service:2.0.2'
+    //implementation 'com.github.wy749814530:MNH5Service:3.0.1'
 }
