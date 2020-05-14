@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">H5Service</string>
+    <string name="four_g">4G-Service</string>
+    <string name="dev_fourg_total">Mein festes Essen</string>
+    <string name="web_order">Meine Bestellung</string>
+    <string name="web_title">Mehrwertdienste</string>
+    <string name="web_close">Herunterfahren</string>
+    <string name="web_pay_succ">Bezahlung erfolgreich</string>
+    <string name="web_pay_failed">Bezahlung fehlgeschlagen</string>
+    <string name="web_pay_ding">Auftragszahlung fehlgeschlagen</string>
+    <string name="web_pay_netpoor">Netzwerkverbindungsfehler</string>
+    <string name="tool_mobile">Mobiles Service-Center</string>
+    <string name="network_monitoring_4G">Geräte-4G-Netzwerkerkennung</string>
+    <string name="pay_faild">Zahlung wurde storniert</string>
+    <string name="pay_succ">Bezahlung erfolgreich</string>
+    <string name="pay_dngdanfied">Auftragszahlung fehlgeschlagen</string>
+    <string name="pay_netpoor">Netzwerkverbindung fehlgeschlagen</string>
+    <string name="dev_freeget">Kostenlos</string>
+    <string name="scode_title">QR-Code scannen</string>
+    <string name="qr_tt">Wählen Sie Hinzufügen</string>
+    <string name="scan_text">Geben Sie den QR-Code in das Feld ein, um automatisch zu scannen</string>
+    <string name="qr_light">Taschenlampe</string>
+    <string name="qr_pic">Fotoalbum</string>
+    <string name="unrecognized_QR">Nicht erkannter QR-Code oder Barcode</string>
+    <string name="label_cancel">Stornieren</string>
+    <string name="label_ok">Bestimmen</string>
+    <string name="tip_title">Prompt</string>
+    <string name="add_wifi_tip">Tipps</string>
+    <string name="add_camera_per">Bitte aktivieren Sie die Kameraberechtigungen in den Einstellungen für den normalen Gebrauch</string>
+    <string name="go_to_settings">Einstellen</string>
+    <string name="put_code_in_the_box">Bitte geben Sie den QR-Code oder Barcode in das Feld ein</string>
+    <string name="scan_code_recognition">Scan-Code-Erkennung</string>
+</resources>

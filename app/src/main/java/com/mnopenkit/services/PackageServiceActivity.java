@@ -1,8 +1,8 @@
 package com.mnopenkit.services;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.mnopenkit.key.Parameter;
@@ -11,7 +11,7 @@ public class PackageServiceActivity extends AppCompatActivity {
 
     String STR_APP_KEY = "8Wa227sQ00S33p4y";
     String STR_APP_SECRET = "RlA8aCPlsuATT227kKTg003ncP35HYRI";
-    String STR_APP_ACCESS_TOKEN = "u_79da3a944baf4dd4b0051cb54bfaf368.cn";
+    String STR_APP_ACCESS_TOKEN = "u_b2c777c965be46918e2c23dc22a94959.cn";
     String STR_USER_ID = "13949127706";
     String STR_H5_HOST = "https://mallcn.bullyun.com";
     String DeviceId_4G = "424684214722498560";
