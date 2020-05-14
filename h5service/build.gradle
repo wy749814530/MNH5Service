@@ -33,6 +33,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compileOnly files('libs/zxing-3.3.3.jar')
+    implementation files('libs/zxing-3.3.3.jar')
     implementation files('libs/alipaySdk-15.7.3-20200217092932.aar')
 }
