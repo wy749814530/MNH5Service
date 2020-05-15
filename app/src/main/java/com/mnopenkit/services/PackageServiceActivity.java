@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.mnopenkit.key.Parameter;
+import mn.openkit.key.Parameter;
+import mn.openkit.services.ShopWebActivity;
 
 public class PackageServiceActivity extends AppCompatActivity {
 

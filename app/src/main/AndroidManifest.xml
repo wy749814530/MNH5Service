@@ -17,6 +17,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mnopenkit.services.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!--
+            1.android:exported:要求必须为false，为true则会报安全异常；
+            2.android:grantUriPermissions:true，表示授予 URI 临时访问权限；
+            3.android:authorities这个属性的值，建议写包名+fileprovider，当然也可以起别的字符串，
+            但是在设备中不能出现2个及以上的APP使用到同一个authorities属性值，因为无法共存。
+            -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>
