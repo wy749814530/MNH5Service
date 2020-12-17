@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MNH5Service.iml" filepath="$PROJECT_DIR$/MNH5Service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/h5service/h5service.iml" filepath="$PROJECT_DIR$/h5service/h5service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MNH5Service.iml" filepath="$PROJECT_DIR$/MNH5Service.iml" group="MNH5Service" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MNH5Service/app" />
+      <module fileurl="file://$PROJECT_DIR$/h5service/h5service.iml" filepath="$PROJECT_DIR$/h5service/h5service.iml" group="MNH5Service/h5service" />
     </modules>
   </component>
 </project>

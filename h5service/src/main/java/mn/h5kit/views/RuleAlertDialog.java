@@ -1,4 +1,4 @@
-package mn.openkit.views;
+package mn.h5kit.views;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import mn.openkit.services.R;
+import mn.h5kit.services.R;
 
 
 /**

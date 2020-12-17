@@ -1,4 +1,4 @@
-package mn.openkit.services;
+package mn.h5kit.activity;
 
 import android.Manifest;
 import android.content.Context;
@@ -11,11 +11,6 @@ import android.net.Uri;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -40,15 +35,21 @@ import android.widget.Toast;
 import com.alipay.sdk.app.H5PayCallback;
 import com.alipay.sdk.app.PayTask;
 import com.alipay.sdk.util.H5PayResultModel;
-import mn.openkit.key.Parameter;
-import mn.openkit.utils.StatusUtils;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import mn.h5kit.key.H5Parameter;
+import mn.h5kit.utils.StatusUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import mn.openkit.services.R;
+import mn.h5kit.services.R;
 /**
  * Created by WIN on 2017/12/19.
  */
@@ -123,23 +124,23 @@ public class ShopWebActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void initData() {
-        deviceId = getIntent().getStringExtra(Parameter.STR_DEVICE_ID); // 设备ID
+        deviceId = getIntent().getStringExtra(H5Parameter.STR_DEVICE_ID); // 设备ID
         loaclDeviceId = deviceId;
-        serviceType = getIntent().getIntExtra(Parameter.INT_SERVICE_TYPE, 0);
-        isFourG = getIntent().getBooleanExtra(Parameter.B_IS_4G_TRAFFIC_QUERY, false);//
-        isMobile = getIntent().getBooleanExtra(Parameter.B_IS_MOBILE_CENTER, false);//
-        isSupport24Record = getIntent().getBooleanExtra(Parameter.B_IS_SUPPORT_24_CLOUD, false);//
-        isReceive = getIntent().getBooleanExtra(Parameter.B_IS_RECEIVE_CLOUD, false);
-        isNetworkMonitoring = getIntent().getBooleanExtra(Parameter.B_IS_NETWORK_MONOTORING, false);
-        receiveType = getIntent().getIntExtra(Parameter.INT_RECEIVE_TYPE, 0);
+        serviceType = getIntent().getIntExtra(H5Parameter.INT_SERVICE_TYPE, 0);
+        isFourG = getIntent().getBooleanExtra(H5Parameter.B_IS_4G_TRAFFIC_QUERY, false);//
+        isMobile = getIntent().getBooleanExtra(H5Parameter.B_IS_MOBILE_CENTER, false);//
+        isSupport24Record = getIntent().getBooleanExtra(H5Parameter.B_IS_SUPPORT_24_CLOUD, false);//
+        isReceive = getIntent().getBooleanExtra(H5Parameter.B_IS_RECEIVE_CLOUD, false);
+        isNetworkMonitoring = getIntent().getBooleanExtra(H5Parameter.B_IS_NETWORK_MONOTORING, false);
+        receiveType = getIntent().getIntExtra(H5Parameter.INT_RECEIVE_TYPE, 0);
 
-        H5_HOST = getIntent().getStringExtra(Parameter.STR_H5_HOST);
-        APP_KEY = getIntent().getStringExtra(Parameter.STR_APP_KEY);
-        APP_SECRET = getIntent().getStringExtra(Parameter.STR_APP_SECRET);
-        APP_ACCESS_TOKEN = getIntent().getStringExtra(Parameter.STR_APP_ACCESS_TOKEN);
-        USER_ID = getIntent().getStringExtra(Parameter.STR_USER_ID);
-        DEVICE_ID = getIntent().getStringExtra(Parameter.STR_DEVICE_ID);
-        DEVICE_NAME = getIntent().getStringExtra(Parameter.STR_DEVICE_NAME);
+        H5_HOST = getIntent().getStringExtra(H5Parameter.STR_H5_HOST);
+        APP_KEY = getIntent().getStringExtra(H5Parameter.STR_APP_KEY);
+        APP_SECRET = getIntent().getStringExtra(H5Parameter.STR_APP_SECRET);
+        APP_ACCESS_TOKEN = getIntent().getStringExtra(H5Parameter.STR_APP_ACCESS_TOKEN);
+        USER_ID = getIntent().getStringExtra(H5Parameter.STR_USER_ID);
+        DEVICE_ID = getIntent().getStringExtra(H5Parameter.STR_DEVICE_ID);
+        DEVICE_NAME = getIntent().getStringExtra(H5Parameter.STR_DEVICE_NAME);
 
         if (isFourG) {
             setTvTitle(getString(R.string.four_g));

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mn.openkit.services">
+    package="mn.h5kit.services">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -12,11 +12,7 @@
     <application>
 
         <activity
-            android:name=".ScanQRcodeActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ShopWebActivity"
+            android:name="mn.h5kit.activity.ShopWebActivity"
             android:screenOrientation="portrait" />
 
     </application>

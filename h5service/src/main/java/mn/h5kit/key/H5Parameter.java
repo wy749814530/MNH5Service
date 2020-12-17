@@ -1,10 +1,10 @@
-package mn.openkit.key;
+package mn.h5kit.key;
 
 /**
  * Created by Administrator on 2020/4/27 0027.
  */
 
-public class Parameter {
+public class H5Parameter {
 
     // 是否是4G设备Traffic query
     public static String B_IS_4G_TRAFFIC_QUERY = "B_IS_4G_TRAFFIC_QUERY";

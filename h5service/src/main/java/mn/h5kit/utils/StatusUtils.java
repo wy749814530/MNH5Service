@@ -1,4 +1,4 @@
-package mn.openkit.utils;
+package mn.h5kit.utils;
 
 import android.app.Activity;
 import android.content.Context;
